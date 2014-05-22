@@ -1,0 +1,65 @@
+/* 
+  Localizable.strings
+  iosferaltar
+
+  Created by Eduardo Tonini on 24/06/13.
+  Copyright (c) 2013 Transportes Turísticos Feraltar, S.A. de C.V. All rights reserved.
+*/
+
+"Book Now" = "Book Now";
+"Services" = "Services";
+"Reservations" = "Reservations";
+"Home" = "Home";
+"Info" = "Info";
+"Chat" = "Chat";
+"About Us" = "About Us";
+
+"From" = "From";
+"Cancun Airport | Select your Hotel" = "Cancun Airport | Select your Hotel";
+"To" = "To";
+"People" = "People";
+"Date" = "Date";
+"Discount Code" = "Discount Code";
+"Search" = "Search";
+"One Way" = "One Way";
+"Round Trip" = "Round Trip";
+"USD" = "USD";
+"Discount of" = "Discount of";
+"dollar on normal price" = "dollar on normal price";
+"Back" = "Back";
+"Your service include" = "Your service include";
+
+"Booking Summary" = "Booking Summary";
+"Primary Passenger Information" = "Primary Passenger Information";
+"Travel Details" = "Travel Details";
+"Select your method payment" = "Select your method payment";
+"Vehicle" = "Vehicle";
+"Type" = "Type";
+"Total" = "Total";
+"Name" = "Name";
+"Email adress" = "Email adress";
+"Mobil Phone" = "Mobil Phone";
+"Pickup From" = "Pickup From";
+"Day and time" = "Day and time";
+"Arrival Airline" = "Arrival Airline";
+"Departure Airline" = "Departure Airline";
+"Flight" = "Flight";
+"Date" = "Date";
+
+"Special request and instructions" = "Special request and instructions";
+"Baby Car Seat" = "Baby Car Seat";
+"Bulky Luggage" = "Bulky Luggage";
+"Yes" = "Yes";
+"No" = "No";
+"Other" = "Other";
+"Legal Notice" = "Legal Notice";
+
+// Message AFNetworking
+"Loading..." = "Loading...";
+"Great Success!" = "Great Success!";
+"Failed with Error" = "Failed with Error";
+
+// Message Email
+"Invalid data" = "Invalid data";
+"Try again" = "Try again";
+"OK" = "OK";

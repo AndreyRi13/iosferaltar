@@ -1,0 +1,5 @@
+platform :ios, '7.0'
+workspace 'iosferaltar'
+pod 'AFNetworking', '~> 2.0'
+pod 'SVProgressHUD', '~> 1.0'
+#pod 'hipmob-ios-experience/hipmob.framework', :git => 'git@github.com:Hipmob/hipmob-ios-experience.git'
