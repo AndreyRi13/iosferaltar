@@ -10,4 +10,9 @@
 
 @interface TTFPayPalViewController : UIViewController <UIWebViewDelegate>
 @property (strong, nonatomic) IBOutlet UIWebView *viewWeb;
+// Contiene reservatin_id para paypalMEC
+
+@property (nonatomic, strong) NSString *amount;
+@property (nonatomic, strong) NSString *desc;
+@property (nonatomic, strong) NSString *invnum;
 @end

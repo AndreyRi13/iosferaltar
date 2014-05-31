@@ -42,6 +42,9 @@
 @property (nonatomic, strong) NSString *babyCarSeat;
 @property (nonatomic, strong) NSString *bulkyLuggage;
 @property (nonatomic, strong) NSString *other;
+// Contiene reservatin_id para paypalMEC
+@property (nonatomic, strong) NSString *invnum;
+
 
 - (IBAction)stepperChanged:(UIStepper *)sender;
 - (IBAction)toogleChanged:(UIButton *)sender;

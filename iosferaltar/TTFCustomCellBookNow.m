@@ -37,11 +37,11 @@
     
     self.labelText.frame = CGRectMake(60, 4, 180, 21);
     [self.labelText setTextColor:[UIColor whiteColor]];
-    [self.labelText setFont:[UIFont fontWithName:font size:16.0f]];
+    [self.labelText setFont:[UIFont fontWithName:font size:14.0f]];
     
     self.labelField.frame = CGRectMake(95, 46, 195, 21);
     [self.labelField setTextColor:[UIColor whiteColor]];
-    [self.labelField setFont:[UIFont fontWithName:font size:16.0f]];
+    [self.labelField setFont:[UIFont fontWithName:font size:14.0f]];
 }
 
 - (IBAction)stepperChanged:(UIStepper *)sender

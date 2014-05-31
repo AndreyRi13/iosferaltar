@@ -1,8 +1,10 @@
+//  Original scripts by Haifa Carina from the Philippines
+//  Website: http://haifa.baluyos.net/index.php?option=com_content&view=article&id=64:objective-c-ios-paypal-integration-tutorial&catid=1:programming&Itemid=5
 //
 //  TTFPayPalViewController.m
 //  iosferaltar
 //
-//  Created by sistemas@feraltar.com on 19/05/14.
+//  Modified by Eduardo Tonini Castillo on 19/05/14.
 //  Copyright (c) 2014 Transportes Turísticos Feraltar, S.A. de C.V. All rights reserved.
 //
 
@@ -17,38 +19,19 @@
 - (void) loadView {
     [super loadView];
     
-    // Creates a UIWebView instance
-    //UIWebView *aWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 00, 320,450)];
-    //self.aWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 00, 320,450)];
-    //self.aWebView.scalesPageToFit = YES;
-    //[self.aWebView setDelegate:self];
-    
-    // PayPal Values needed for the checkout/transaction
-    // In this case, the item is Gum with the amount of 1
-    NSString *item = @"Gum";
-    NSInteger amount = 168;
-    
-    NSString *itemParameter = @"itemName=";
-    itemParameter = [itemParameter stringByAppendingString:item];
-    
-    NSString *amountParameter = @"456";
-    amountParameter = [amountParameter stringByAppendingFormat:@"%ld",(long)amount];
-
-    /*
-    NSString *urlString = @"http://haifa.baluyos.net/dev/PayPal/SetExpressCheckout.php?";
-    //NSString *urlString = @"http://www.api.cancunreservation.net/PayPal/SetExpressCheckout.php?";
-    //NSString *urlString = @"http://localhost/projrestful/paypal/SetExpressCheckout.php?";
-    urlString = [urlString stringByAppendingString:amountParameter];
+    NSString *keyAmount = @"amount=";
+    NSString *keyDescription = @"desc=";
+    NSString *keyInvnum = @"invnum=";
+    NSString *urlString = @"http://localhost/projrestful/paypal/SetExpressCheckout.php?";
+    //NSString *urlString = @"http://www.api.cancunreservation.net/paypal/SetExpressCheckout.php?";
+    urlString = [urlString stringByAppendingString:keyAmount];
+    urlString = [urlString stringByAppendingString:self.amount];
     urlString = [urlString stringByAppendingString:@"&"];
-    urlString = [urlString stringByAppendingString:itemParameter];
-    */
-     
-    NSString *urlString = @"http://localhost/projrestful/paypal/SetExpressCheckout.php?amount=480&itemName=Suburban";
-    //NSString *urlString = @"http://www.api.cancunreservation.net/paypal/SetExpressCheckout.php?amount=480&itemName=Suburban";
-    
-    /* Appending these string will result to this:
-        http://haifa.baluyos.net/dev/PayPal/SetExpressCheckout.php?amount=1&;itemName=Gum
-    */
+    urlString = [urlString stringByAppendingString:keyDescription];
+    urlString = [urlString stringByAppendingString:self.desc];
+    urlString = [urlString stringByAppendingString:@"&"];
+    urlString = [urlString stringByAppendingString:keyInvnum];
+    urlString = [urlString stringByAppendingString:self.invnum];
     
     //Create a URL object.
     NSURL *url = [NSURL URLWithString:urlString];
@@ -61,9 +44,11 @@
     
     NSLog(@"requestObj %@", requestObj);
     
-    //[self.view addSubview:myLabel];
-    //[self.view addSubview:aWebView];
-    
+}
+
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
 }
 
 @end

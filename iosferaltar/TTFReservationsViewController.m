@@ -9,6 +9,7 @@
 #import "TTFReservationsViewController.h"
 #import "TTFSessionManager.h"
 #import "TTFEditingViewController.h"
+#import "TTFPayPalViewController.h"
 #import "TTFLegalNoticeViewController.h"
 #import "TTFData.h"
 
@@ -144,7 +145,7 @@
      @"baby_car_seat":self.babyCarSeat,
      @"bulky_luggage":self.bulkyLuggage};
      */
-    /*
+    ///*
     NSDictionary *parameters = @{@"siteid":@"1",
                                  @"ptype":@"2",
                                  @"services_id":@"1",
@@ -166,6 +167,7 @@
     [[TTFSessionManager sharedInstance] POST:@"services"
                                   parameters:parameters
                                      success:^(NSURLSessionDataTask *task, id responseObject) {
+                                         self.invnum = [responseObject valueForKey:@"reservation_id"];
                                          static NSString *segueToPayPalPayment = @"modalPaypalMEC";
                                          [self performSegueWithIdentifier:segueToPayPalPayment sender:self];
                                      } failure:^(NSURLSessionDataTask *task, NSError *error) {
@@ -177,10 +179,6 @@
                                          
                                          [alertView show];
                                      }];
-    */
-    static NSString *segueToPayPalPayment = @"modalPaypalMEC";
-    [self performSegueWithIdentifier:segueToPayPalPayment sender:self];
-    
 }
 
 #pragma mark - IBActions
@@ -745,13 +743,16 @@
             }
         }
         
-    } /*else if ([segue.identifier isEqualToString:@"modalPaypalMEC"]) {
-        TTFPaypalPaymentViewController *dvc = [segue destinationViewController];
-         dvc.total = self.total;
-         if (self.transfer == self->ath) {
-         dvc.description = [NSString stringWithFormat:@"Arrival %@", self.type];
-         }
-    }*/
+    } else if ([segue.identifier isEqualToString:@"modalPaypalMEC"]) {
+        // Lookup the cell's index path so we know which row was selected.
+        NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
+            TTFPayPalViewController *dvc = [segue destinationViewController];
+            dvc.desc = self.vehicle;
+            dvc.amount = self.total;
+            dvc.invnum = self.invnum;
+            NSLog(@"self.total %@ self.total %@ self.total %@", self.vehicle, self.invnum, self.total);
+
+    }
     
 }
 

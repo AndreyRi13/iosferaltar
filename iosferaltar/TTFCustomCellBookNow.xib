@@ -15,10 +15,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SK5-rE-S5V">
-                        <rect key="frame" x="10" y="13" width="40" height="48"/>
+                        <rect key="frame" x="20" y="20" width="30" height="31"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="40" id="zoS-9e-UZs"/>
+                            <constraint firstAttribute="width" constant="30" id="zoS-9e-UZs"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmc-kU-Rfs">
@@ -50,13 +50,13 @@
                     <constraint firstAttribute="trailing" secondItem="ckQ-8U-vZP" secondAttribute="trailing" constant="17" id="3qb-3Z-TuH"/>
                     <constraint firstAttribute="trailing" secondItem="fmc-kU-Rfs" secondAttribute="trailing" constant="48" id="BQS-iJ-VPs"/>
                     <constraint firstItem="ckQ-8U-vZP" firstAttribute="top" secondItem="fmc-kU-Rfs" secondAttribute="bottom" constant="10" id="G9P-o3-h7V"/>
-                    <constraint firstItem="SK5-rE-S5V" firstAttribute="leading" secondItem="RYO-hr-7xO" secondAttribute="leading" constant="10" id="N0V-bO-RXq"/>
+                    <constraint firstItem="SK5-rE-S5V" firstAttribute="leading" secondItem="RYO-hr-7xO" secondAttribute="leading" constant="20" id="N0V-bO-RXq"/>
                     <constraint firstItem="fmc-kU-Rfs" firstAttribute="leading" secondItem="SK5-rE-S5V" secondAttribute="trailing" constant="10" id="QDO-ky-bsJ"/>
                     <constraint firstItem="mT3-8i-mjU" firstAttribute="leading" secondItem="SK5-rE-S5V" secondAttribute="trailing" constant="45" id="bhb-d5-VQC"/>
-                    <constraint firstAttribute="bottom" secondItem="SK5-rE-S5V" secondAttribute="bottom" constant="10" id="c7J-KJ-iCC"/>
+                    <constraint firstAttribute="bottom" secondItem="SK5-rE-S5V" secondAttribute="bottom" constant="20" id="c7J-KJ-iCC"/>
                     <constraint firstItem="mT3-8i-mjU" firstAttribute="top" secondItem="fmc-kU-Rfs" secondAttribute="bottom" constant="21" id="dUJ-MV-Z4E"/>
                     <constraint firstAttribute="trailing" secondItem="mT3-8i-mjU" secondAttribute="trailing" constant="-3" id="nQK-qY-zz5"/>
-                    <constraint firstItem="SK5-rE-S5V" firstAttribute="top" secondItem="RYO-hr-7xO" secondAttribute="top" constant="13" id="vND-IL-z4u"/>
+                    <constraint firstItem="SK5-rE-S5V" firstAttribute="top" secondItem="RYO-hr-7xO" secondAttribute="top" constant="20" id="vND-IL-z4u"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

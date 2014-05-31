@@ -80,27 +80,29 @@
 // Custom NatigationBar
 - (void)customizeNavigationBar
 {
-    // Set the setBackgroundImage
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"header.png"] forBarMetrics:UIBarMetricsDefault];
-    
-    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"header.png"] forBarMetrics:UIBarMetricsDefault];
+    // Set the setBackgroundImage    
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navbar.png"] forBarMetrics:UIBarMetricsDefault];
     
     // Set the setTintColor
     [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:1.0f]];
     
     // Title text for *all* UINavigationBars
-    NSShadow *titleShadow = [[NSShadow alloc] init];
-    titleShadow.shadowOffset = CGSizeMake(0.0f, -1.0f);
-    titleShadow.shadowColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1.0f];
     [[UINavigationBar appearance] setTitleTextAttributes:@{
-                                                           NSForegroundColorAttributeName:[UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:1.0f],
-                                                                    NSShadowAttributeName:titleShadow,
-                                                                      NSFontAttributeName:[UIFont fontWithName:@"Helvetica-Bold" size:20.0f]}];
-
+                                                           NSForegroundColorAttributeName:[UIColor colorWithRed:255/255.0f
+                                                                                                          green:255/255.0f
+                                                                                                           blue:255/255.0f
+                                                                                                          alpha:1.0f],
+                                                                      NSFontAttributeName:[UIFont fontWithName:@"Helvetica-Bold"
+                                                                                                          size:17.0f]}];
+    
     // Custom UIBarButtmItem
     [[UIBarButtonItem appearance] setTitleTextAttributes:@{
-                                                          NSForegroundColorAttributeName:[UIColor colorWithRed:255/255.0f green:255/255.0f blue:255/255.0f alpha:1.0f],
-                                                                     NSFontAttributeName:[UIFont fontWithName:@"Helvetica-Bold" size:14.0f]}
+                                                          NSForegroundColorAttributeName:[UIColor colorWithRed:255/255.0f
+                                                                                                         green:255/255.0f
+                                                                                                          blue:255/255.0f
+                                                                                                         alpha:1.0f],
+                                                                     NSFontAttributeName:[UIFont fontWithName:@"Helvetica-Bold"
+                                                                                                         size:17.0f]}
                                                 forState:UIControlStateNormal];
 }
 
@@ -120,10 +122,10 @@
     tabBarItem3.title = NSLocalizedString(@"Chat",@"ir a Localizable.strings");
     tabBarItem4.title = NSLocalizedString(@"About Us",@"ir a Localizable.strings");
 
-    [tabBarItem1 setFinishedSelectedImage:[UIImage imageNamed:@"home_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"home.png"]];
-    [tabBarItem2 setFinishedSelectedImage:[UIImage imageNamed:@"info_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"info.png"]];
-    [tabBarItem3 setFinishedSelectedImage:[UIImage imageNamed:@"chat_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"chat.png"]];
-    [tabBarItem4 setFinishedSelectedImage:[UIImage imageNamed:@"feraltar_selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"feraltar.png"]];
+    [tabBarItem1 setFinishedSelectedImage:[UIImage imageNamed:@"home-selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"home.png"]];
+    [tabBarItem2 setFinishedSelectedImage:[UIImage imageNamed:@"info-selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"info.png"]];
+    [tabBarItem3 setFinishedSelectedImage:[UIImage imageNamed:@"chat-selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"chat.png"]];
+    [tabBarItem4 setFinishedSelectedImage:[UIImage imageNamed:@"feraltar-selected.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"feraltar.png"]];
 
     //[tabBarItem1 setImage:[[UIImage imageNamed:@"home.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     //[tabBarItem1 setSelectedImage:[[UIImage imageNamed:@"home_selected.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];

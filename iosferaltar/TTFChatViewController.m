@@ -28,10 +28,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
-    // Fija imagen de fondo para UIViewController
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.png"]];
-    
 }
 
 - (void)didReceiveMemoryWarning

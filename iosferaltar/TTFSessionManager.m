@@ -2,14 +2,14 @@
 //  TTFHTTPSessionManager.m
 //  iosferaltar
 //
-//  Created by sistemas@feraltar.com on 06/03/14.
+//  Created by Eduardo Tonini on 06/03/14.
 //  Copyright (c) 2014 Transportes Turísticos Feraltar, S.A. de C.V. All rights reserved.
 //
 
 #import "TTFSessionManager.h"
 
-//static NSString * const baseURLString = @"http://localhost/projrestful/";
-static NSString * const baseURLString = @"http://www.api.cancunreservation.net/";
+static NSString * const baseURLString = @"http://localhost/projrestful/";
+//static NSString * const baseURLString = @"http://www.api.cancunreservation.net/";
 
 @implementation TTFSessionManager
 

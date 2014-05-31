@@ -162,7 +162,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return 4; //5
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -178,18 +178,17 @@
     }
     
     [cell.stepper setHidden:YES];
-    
     switch (indexPath.row) {
         case 0:
             cell.image.image=[UIImage imageNamed:@"from-icon.png"];
-            cell.image.frame = CGRectMake(10, 13, 35, 48);
+            cell.image.frame = CGRectMake(10, 13, 30, 31);
             cell.image.contentMode = UIViewContentModeScaleAspectFit;
             cell.labelText.text = NSLocalizedString(@"From", @"ir a Localizable.strings");
             cell.labelField.text = self.fromName;
             break;
         case 1:
             cell.image.image=[UIImage imageNamed:@"to-icon.png"];
-            cell.image.frame = CGRectMake(10, 13, 31, 42);
+            cell.image.frame = CGRectMake(10, 13, 30, 31);
             cell.image.contentMode = UIViewContentModeScaleAspectFit;
             cell.labelText.text = NSLocalizedString(@"To", @"ir a Localizable.strings");
             cell.labelField.text = self.toName;
@@ -200,30 +199,23 @@
             
             [cell.stepper setHidden:NO];
             
-            cell.image.image=[UIImage imageNamed:@"Personas.png"];
-            cell.image.frame = CGRectMake(10, 13, 40, 34);
+            cell.image.image=[UIImage imageNamed:@"pax-icon.png"];
+            cell.image.frame = CGRectMake(10, 13, 30, 31);
             cell.image.contentMode = UIViewContentModeScaleAspectFit;
             cell.labelText.text = NSLocalizedString(@"People", @"ir a Localizable.strings");
             cell.labelField.text = cell.labelField.text;
             self.pax = cell.labelField.text;
             break;
         case 3:
-            cell.image.image=[UIImage imageNamed:@"Calendario.png"];
-            cell.image.frame = CGRectMake(10, 13, 34, 37);
-            cell.image.contentMode = UIViewContentModeScaleAspectFit;
-            cell.labelText.text = NSLocalizedString(@"Date", @"ir a Localizable.strings");
-            cell.labelField.text = [NSString stringWithFormat:@"%@", [self.dateFormatter stringFromDate:self.date]];
-            break;
-        case 4:
-            cell.image.image=[UIImage imageNamed:@"cupon.png"];
-            cell.image.frame = CGRectMake(10, 13, 37, 37);
+            cell.image.image=[UIImage imageNamed:@"coupon-icon.png"];
+            cell.image.frame = CGRectMake(10, 13, 30, 31);
             cell.image.contentMode = UIViewContentModeScaleAspectFit;
             cell.labelText.text = NSLocalizedString(@"Discount Code", @"ir a Localizable.strings");
             cell.labelField.text = self.code;
             break;
     }
-    
-    if (self.fromID != nil && self.toID != nil && self.pax != nil && self.date != nil) {
+
+    if (self.fromID != nil && self.toID != nil && self.pax != nil) {
         [self.searchButton setEnabled:YES];
     }
     
@@ -259,9 +251,6 @@
         case 3:
             [self performSegueWithIdentifier:@"pushSegueEditionControls" sender:indexPath];
             break;
-        case 4:
-            [self performSegueWithIdentifier:@"pushSegueEditionControls" sender:indexPath];
-            break;
         default:
             break;
     }
@@ -292,12 +281,6 @@
         
         switch (selectedIndexPath.row) {
             case 3:
-                editingController.editedPropertyKey = @"date";
-                editingController.editedPropertyDisplayName = NSLocalizedString(@"Date", @"ir a Localizable.strings");
-                editingController.editingDate = YES;
-                editingController.editingTextView = NO;
-                break;
-            case 4:
                 editingController.editedPropertyKey = @"code";
                 editingController.editedPropertyDisplayName = NSLocalizedString(@"Discount Code", @"ir a Localizable.strings");
                 editingController.editingDate = NO;
@@ -358,9 +341,6 @@
     
     NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
     if (selectedIndexPath.row == 3) {
-      	[self.data setValue:newValue forKey:field];
-        self.date = newValue;
-    } else if (selectedIndexPath.row == 4) {
       	[self.data setValue:newValue forKey:field];
         self.code = newValue;
     }
